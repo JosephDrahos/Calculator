@@ -1,0 +1,14 @@
+.root {
+  -fx-background-color: #383838;
+  -fx-font-size: 30pt;
+}
+.slider:vertical.track
+{
+  -fx-pref-width:500;
+  -fx-block-increment: 1000;
+}
+
+.textfield
+{
+  -fx-background-color: #D2D2D2
+}
