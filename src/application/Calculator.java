@@ -16,14 +16,10 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.*;
 import javafx.beans.value.*;
 
-import static java.lang.Character.isDigit;
-
 public class Calculator extends Application {
 
     String calculation = new String();
 
-
-    @Override
     public void start(Stage FullStage) {
         try {
 
@@ -31,150 +27,152 @@ public class Calculator extends Application {
             //root.setStyle("fx-background-color: #444444");
             //root.setSpacing(10.0f);
 
-            Button num1 = new Button(); // First button
+            Button num1 = new Button(); // Button Number 1
             num1.setText("1");
             num1.setStyle("-fx-background-color: #228B22; -fx-font-size: 30; -fx-text-fill: #EEEEEE;");
             num1.setMinWidth(100);
             num1.setMinHeight(100);
 
 
-            Button num2 = new Button(); // First button
+            Button num2 = new Button(); // Button Number 2
             num2.setText("2");
             num2.setStyle("-fx-background-color: #FFD700; -fx-font-size: 30; -fx-text-fill: #000000;");
             num2.setMinWidth(100);
             num2.setMinHeight(100);
 
-            Button num3 = new Button(); // First button
+            Button num3 = new Button(); // Button Number 3
             num3.setText("3");
             num3.setStyle("-fx-background-color: #228B22; -fx-font-size: 30; -fx-text-fill: #EEEEEE;");
             num3.setMinWidth(100);
             num3.setMinHeight(100);
 
-            Button num4 = new Button(); // First button
+            Button num4 = new Button(); // Button Number 4
             num4.setText("4");
             num4.setStyle("-fx-background-color: #228B22; -fx-font-size: 30; -fx-text-fill: #EEEEEE;");
             num4.setMinWidth(100);
             num4.setMinHeight(100);
 
-            Button num5 = new Button(); // First button
+            Button num5 = new Button(); // Button Number 5
             num5.setText("5");
             num5.setStyle("-fx-background-color: #FFD700; -fx-font-size: 30; -fx-text-fill: #000000;");
             num5.setMinWidth(100);
             num5.setMinHeight(100);
 
 
-            Button num6 = new Button(); // First button
+            Button num6 = new Button(); // Button Number 6
             num6.setText("6");
             num6.setStyle("-fx-background-color: #228B22; -fx-font-size: 30; -fx-text-fill: #EEEEEE;");
             num6.setMinWidth(100);
             num6.setMinHeight(100);
 
-            Button num7 = new Button(); // First button
+            Button num7 = new Button(); // Button Number 7
             num7.setText("7");
             num7.setStyle("-fx-background-color: #FFD700; -fx-font-size: 30; -fx-text-fill: #000000;");
             num7.setMinWidth(100);
             num7.setMinHeight(100);
 
-            Button num8 = new Button(); // First button
+            Button num8 = new Button(); // Button Number 8
             num8.setText("8");
             num8.setStyle("-fx-background-color: #FFD700; -fx-font-size: 30; -fx-text-fill: #000000;");
             num8.setMinWidth(100);
             num8.setMinHeight(100);
 
-            Button num9 = new Button(); // First button
+            Button num9 = new Button(); // Button Number 9
             num9.setText("9");
             num9.setStyle("-fx-background-color: #228B22; -fx-font-size: 30; -fx-text-fill: #EEEEEE;");
             num9.setMinWidth(100);
             num9.setMinHeight(100);
 
-            Button num0 = new Button(); // First button
+            Button num0 = new Button(); // Button Number 0
             num0.setText("0");
             num0.setStyle("-fx-background-color: #228B22; -fx-font-size: 30; -fx-text-fill: #EEEEEE;");
             num0.setMinWidth(210);
             num0.setMinHeight(100);
 
-            Button btnClr = new Button(); // First button
+            Button btnClr = new Button(); // Button Clear
             btnClr.setText("C");
             btnClr.setStyle("-fx-background-color: #FFD700; -fx-font-size: 30; -fx-text-fill: #000000;");
             btnClr.setMinWidth(100);
             btnClr.setMinHeight(100);
 
 
-            Button btnDiv = new Button(); // First button
+            Button btnDiv = new Button(); // Divide Operation
             btnDiv.setText("/");
             btnDiv.setStyle("-fx-background-color: #228B22; -fx-font-size: 30; -fx-text-fill: #EEEEEE;");
             btnDiv.setMinWidth(100);
             btnDiv.setMinHeight(100);
 
-            Button btnMult = new Button(); // First button
+            Button btnMult = new Button(); // Multiply Operation
             btnMult.setText("X");
             btnMult.setStyle("-fx-background-color: #228B22; -fx-font-size: 30; -fx-text-fill: #EEEEEE;");
             btnMult.setMinWidth(100);
             btnMult.setMinHeight(100);
 
-            Button btnAdd = new Button(); // First button
+            Button btnAdd = new Button(); // Addition Operation
             btnAdd.setText("+");
             btnAdd.setStyle("-fx-background-color: #228B22; -fx-font-size: 30; -fx-text-fill: #EEEEEE;");
             btnAdd.setMinWidth(100);
             btnAdd.setMinHeight(100);
 
-            Button btnSub = new Button(); // First button
+            Button btnSub = new Button(); // Subtraction Operation
             btnSub.setText("-");
             btnSub.setStyle("-fx-background-color: #FFD700; -fx-font-size: 30; -fx-text-fill: #000000;");
             btnSub.setMinWidth(100);
             btnSub.setMinHeight(100);
 
 
-            Button btnSq = new Button(); // First button
+            Button btnSq = new Button(); // Square Operation (x^2)
             btnSq.setText("x^2");
             btnSq.setStyle("-fx-background-color: #228B22; -fx-font-size: 30; -fx-text-fill: #EEEEEE;");
             btnSq.setMinWidth(100);
             btnSq.setMinHeight(100);
 
-            Button btnSqrt = new Button(); // First button
+            Button btnSqrt = new Button(); // Square root operation
             btnSqrt.setText("√");
             btnSqrt.setStyle("-fx-background-color: #FFD700; -fx-font-size: 30; -fx-text-fill: #000000;");
             btnSqrt.setMinWidth(100);
             btnSqrt.setMinHeight(100);
 
-            Button btnEql = new Button(); // First button
+            Button btnEql = new Button(); // Summation of operands
             btnEql.setText("=");
             btnEql.setStyle("-fx-background-color: #FFD700; -fx-font-size: 30; -fx-text-fill: #000000;");
             btnEql.setMinWidth(210);
             btnEql.setMinHeight(100);
 
-            Button btnNeg = new Button(); // First button
+            Button btnNeg = new Button(); // Negation Operation
             btnNeg.setText("Neg");
             btnNeg.setStyle("-fx-background-color: #228B22; -fx-font-size: 30; -fx-text-fill: #EEEEEE;");
             btnNeg.setMinWidth(100);
             btnNeg.setMinHeight(100);
 
-            Button btnPwr = new Button(); // First button
+            Button btnPwr = new Button(); // Set num to power (x^y)
             btnPwr.setText("^");
             btnPwr.setStyle("-fx-background-color: #228B22; -fx-font-size: 30; -fx-text-fill: #EEEEEE;");
             btnPwr.setMinWidth(100);
             btnPwr.setMinHeight(100);
 
-            Button btnDec = new Button();
+            Button btnDec = new Button(); //Decimal point
             btnDec.setText(".");
             btnDec.setStyle("-fx-background-color: #FFD700; -fx-font-size: 30; -fx-text-fill: #000000;");
             btnDec.setMinWidth(100);
             btnDec.setMinHeight(100);
 
-            Button btnClrE = new Button();
+            Button btnClrE = new Button();  //Clear entry
             btnClrE.setText("CE");
             btnClrE.setStyle("-fx-background-color: #FFD700; -fx-font-size: 30; -fx-text-fill: #000000;");
             btnClrE.setMinWidth(100);
             btnClrE.setMinHeight(100);
 
-            TextField summationZone = new TextField();
+            TextField summationZone = new TextField();  //Sets textfield at top of calculator
             summationZone.setMinSize(400,75);
             summationZone.getStyleClass().add(".textfield");
 
-            Slider numSlider = new Slider();
+            Slider numSlider = new Slider();    //Created slider on side of calculator
             numSlider.setStyle(" -fx-font-size: 18;");
             numSlider.getStyleClass().add(".slider");
-            //numSlider.setMinSize(0, 400);
+
+//*********************************************************************************************************
+//The code below sets the location of all the buttons, textfield, and slider of the calculator
 
             num0.setLayoutX(0);
             num0.setLayoutY(660);
@@ -248,9 +246,11 @@ public class Calculator extends Application {
             numSlider.setRotate(270);
             numSlider.setLayoutX(400);
             numSlider.setLayoutY(440);
-
+//**********************************************************************************************************
+            //Adds all buttons, textfield, and slider to the root
             root.getChildren().addAll(num0,num1,num2,num3,num4,num5,num6,num7,num8,num9,btnAdd,btnClr,btnDiv,btnEql,btnMult,btnNeg,btnPwr,btnSq,btnSqrt,btnSub,summationZone,btnClrE,btnDec,numSlider);
 
+            //Prints "0" when clicked
             num0.addEventFilter( MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent me) {
                     calculation = calculation.concat("0");
@@ -258,6 +258,7 @@ public class Calculator extends Application {
                 }
             });
 
+            //Prints "1" when clicked
             num1.addEventFilter( MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent me) {
                     calculation = calculation.concat("1");
@@ -265,6 +266,7 @@ public class Calculator extends Application {
                 }
             });
 
+            //Prints "2" when clicked
             num2.addEventFilter( MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent me) {
                     calculation = calculation.concat("2");
@@ -272,6 +274,7 @@ public class Calculator extends Application {
                 }
             });
 
+            //Prints "3" when clicked
             num3.addEventFilter( MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent me) {
                     calculation = calculation.concat("3");
@@ -279,6 +282,7 @@ public class Calculator extends Application {
                 }
             });
 
+            //Prints "4" when clicked
             num4.addEventFilter( MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent me) {
                     calculation = calculation.concat("4");
@@ -286,6 +290,7 @@ public class Calculator extends Application {
                 }
             });
 
+            //Prints "5" when clicked
             num5.addEventFilter( MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent me) {
                     calculation = calculation.concat("5");
@@ -293,6 +298,7 @@ public class Calculator extends Application {
                 }
             });
 
+            //Prints "6" when clicked
             num6.addEventFilter( MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent me) {
                     calculation = calculation.concat("6");
@@ -300,6 +306,7 @@ public class Calculator extends Application {
                 }
             });
 
+            //Prints "7" when clicked
             num7.addEventFilter( MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent me) {
                     calculation = calculation.concat("7");
@@ -307,6 +314,7 @@ public class Calculator extends Application {
                 }
             });
 
+            //Prints "8" when clicked
             num8.addEventFilter( MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent me) {
                     calculation = calculation.concat("8");
@@ -314,6 +322,7 @@ public class Calculator extends Application {
                 }
             });
 
+            //Prints "9" when clicked
             num9.addEventFilter( MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent me) {
                     calculation = calculation.concat("9");
@@ -321,6 +330,7 @@ public class Calculator extends Application {
                 }
             });
 
+            //Prints " + " when clicked
             btnAdd.addEventFilter( MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent me) {
                     calculation = calculation.concat(" + ");
@@ -328,6 +338,7 @@ public class Calculator extends Application {
                 }
             });
 
+            //Clears text field when clicked
             btnClr.addEventFilter( MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent me) {
                     calculation = "";
@@ -335,6 +346,7 @@ public class Calculator extends Application {
                 }
             });
 
+            //Prints " / " when clicked
             btnDiv.addEventFilter( MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent me) {
                     calculation = calculation.concat(" / ");
@@ -342,6 +354,7 @@ public class Calculator extends Application {
                 }
             });
 
+            //Prints " * " when clicked
             btnMult.addEventFilter( MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent me) {
                     calculation = calculation.concat(" * ");
@@ -349,6 +362,7 @@ public class Calculator extends Application {
                 }
             });
 
+            //Runs the "evaluate" function with the negation unary operation
             btnNeg.addEventFilter( MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent me) {
                     calculation = evaluate(calculation,"-",true);
@@ -356,6 +370,7 @@ public class Calculator extends Application {
                 }
             });
 
+            //Prints " ^ " when clicked
             btnPwr.addEventFilter( MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent me) {
                     calculation = calculation.concat(" ^ ");
@@ -363,6 +378,7 @@ public class Calculator extends Application {
                 }
             });
 
+            //Runs the "evaluate" function with the square unary operation
             btnSq.addEventFilter( MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent me) {
                     calculation = evaluate(calculation,"sq",true);
@@ -371,6 +387,7 @@ public class Calculator extends Application {
                 }
             });
 
+            //Prints " - " when clicked
             btnSub.addEventFilter( MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent me) {
                     calculation = calculation.concat(" - ");
@@ -378,6 +395,7 @@ public class Calculator extends Application {
                 }
             });
 
+            //Summates the string in the textfield
             btnEql.addEventFilter( MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent me) {
                     calculation = evaluate(calculation,"eq",false);
@@ -385,6 +403,7 @@ public class Calculator extends Application {
                 }
             });
 
+            //Runs the "evaluate" function with the Square root unary operation
             btnSqrt.addEventFilter( MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent me) {
 
@@ -393,6 +412,7 @@ public class Calculator extends Application {
                 }
             });
 
+            //Print "." when clicked
             btnDec.addEventFilter( MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent me) {
                     calculation = calculation.concat(".");
@@ -400,6 +420,7 @@ public class Calculator extends Application {
                 }
             });
 
+            //Runs the "evaluate" function and clears the last known entry of the string in the textfield
             btnClrE.addEventFilter( MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent me) {
                     calculation = evaluate(calculation,"CE",false);
@@ -407,8 +428,8 @@ public class Calculator extends Application {
                 }
             });
 
+            //Allows for the user to type in calculations in the textfield as well as calculate when they press "enter"
             summationZone.addEventFilter( KeyEvent.KEY_RELEASED, new EventHandler<KeyEvent>() {
-                // shift focus between buttons if f is pressed
                 public void handle( KeyEvent ke ) {
                     if(ke.getCode() == KeyCode.ENTER){
                         calculation = evaluate(calculation,"eq",false);
@@ -421,6 +442,7 @@ public class Calculator extends Application {
                 }
             });
 
+            //Sets the slider to enter a value between 0 and 100
             numSlider.valueProperty().addListener(new ChangeListener<Number>(){
                 @Override
                 public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue){
@@ -447,7 +469,7 @@ public class Calculator extends Application {
 
 
             Scene scene = new Scene(root, 500, 775);
-            scene.getStylesheets().add("application/Calc.css");
+            scene.getStylesheets().add("application/Calc.css");     //Adds css file
             FullStage.setScene(scene);
             FullStage.show();
 
@@ -456,6 +478,14 @@ public class Calculator extends Application {
         }
     }
 
+    /**
+     * Evaluates the given input string against the operation which it is passed. Also checks
+     * if the operation is unary or not
+     * @param input
+     * @param op
+     * @param unary
+     * @return
+     */
     private String evaluate(String input, String op, Boolean unary){
         try {
             Scanner inScanner = new Scanner(input);
